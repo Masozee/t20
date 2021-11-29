@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+{% load static %}
+{% load thumbnail %}
+ 
+
+{% block content %}
+   
+    <div class="light-wrapper">
+      <div class="tp-fullscreen-container revolution">
+        <div class="tp-fullscreen">
+          <ul>
+            <li data-transition="fade"> <img src="{% static 'web/images/art/rs1.jpg' %}"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+              <div class="tp-caption main-title sfl" data-x="350" data-y="263" data-speed="600" data-start="500" data-endspeed="100" data-easing="Sine.easeOut"> <strong>T20 Indonesia Summit</strong></div>
+              <div class="tp-caption lead sfl text-center" data-x="center" data-y="337" data-speed="600" data-start="1500" data-endspeed="100" data-easing="Sine.easeOut">Jakarta, September 2022</div>
+              <div class="tp-caption sfb" data-x="center" data-y="450" data-speed="600" data-start="2500" data-easing="Sine.easeOut"  data-endspeed="100"><a href="{% url 'events' %}" class="btn btn-border">Read More</a></div>
+            </li>
+            <li data-transition="fade"> <img src="{% static 'web/images/art/rs1.jpg' %}"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+              <div class="tp-caption main-title sfl" data-x="350" data-y="263" data-speed="600" data-start="500" data-endspeed="100" data-easing="Sine.easeOut"> <strong>Global Policy Forum</strong></div>
+              <div class="tp-caption lead sfl text-center" data-x="center" data-y="337" data-speed="600" data-start="1500" data-endspeed="100" data-easing="Sine.easeOut">Jakarta, June - August 2022</div>
+              <div class="tp-caption sfb" data-x="center" data-y="450" data-speed="600" data-start="2500" data-easing="Sine.easeOut"  data-endspeed="100"><a href="{% url 'events' %}" class="btn btn-border">Read More</a></div>
+            </li>
+            <li data-transition="fade"> <img src="{% static 'web/images/art/rs3.jpg' %}" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
+              <div class="tp-caption main-title light-layer sfb" data-x="center" data-y="293" data-speed="900" data-start="800" data-endspeed="100" data-easing="Sine.easeOut">Task <strong>Forces</strong></div>
+              <div class="tp-caption lead light-layer sfb text-center" data-x="center" data-y="387" data-speed="900" data-start="1500" data-endspeed="100" data-easing="Sine.easeOut">View the policy areas of task forces</div>
+              <div class="tp-caption sfb" data-x="center" data-y="500" data-speed="600" data-start="2500" data-easing="Sine.easeOut"  data-endspeed="100"><a href="{% url 'task-forces' %}" class="btn btn-border">Read More</a></div>
+            </li>
+            <li data-transition="fade"> <img src="{% static 'web/images/art/rs3.jpg' %}" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
+              <div class="tp-caption main-title light-layer sfb" data-x="center" data-y="293" data-speed="900" data-start="800" data-endspeed="100" data-easing="Sine.easeOut">Call for <strong>Paper</strong></div>
+              <div class="tp-caption lead light-layer sfb text-center" data-x="center" data-y="387" data-speed="900" data-start="1500" data-endspeed="100" data-easing="Sine.easeOut">Application opens 1 December 2021</div>
+              <div class="tp-caption sfb" data-x="center" data-y="500" data-speed="600" data-start="2500" data-easing="Sine.easeOut"  data-endspeed="100"><a href="https://info.t20indonesia.org" class="btn btn-border">Read More</a></div>
+            </li>
+          </ul>
+          <div class="tp-bannertimer tp-bottom"></div>
+        </div>
+        <!-- /.tp-fullscreen-container --> 
+      </div>
+      <!-- /.revolution --> 
+    </div>
+    <!--/.light-wrapper -->
+    
+    <div class="dark-wrapper">
+      <div class="container inner">
+        <div class="row">
+          <div class="col-sm-4 col-md-3">
+            <h3 class="main-title">T20 <strong>Events</strong></h3>
+            <p class="ft-roboto ft-300">Join our event series, where hundreds of researchers from prominent global think tanks gather to provide independent and analytical recommendations to G20’s decision-making process.</p>
+            <div class="divide10"></div>
+            <div class="nav-outside owl-nav"></div>
+            <!--/.nav-outside --> 
+          </div>
+          <!--/column -->
+          <div class="col-sm-8 col-md-9">
+            <div class="carousel-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+              <div class="carousel carousel-boxed2 steps2">
+                {% for A in events %}
+                <div class="item boxevent">
+                  <div class="steps-item box text-center"><span class="number"></span>
+                    <div> <img src="{{ A.gambar | thumbnail_url:'avatar'  }}" data-src="{{ A.gambar | thumbnail_url:'avatar'}}" data-ret="{{ A.gambar | thumbnail_url:'retina'}}" class="retina" alt="" /> </div>
+                    <br><h4>{{A.judul}}</h4>
+                    <p class="ft-roboto ft-300">{{ A.description | safe|truncatewords_html:10}}</p>
+                  </div>
+                  <!--/.box --> 
+                </div>
+                <!--/.item -->
+                {% endfor A %}
+                
+                <!--/.item -->
+                <div class="item boxevent">
+                  <div class="steps-item box text-center"><span class="number"></span>
+                    
+                    <h4 style="padding: 180px 0;"><a href="">Read More ...</h4>
+                    
+                  </div>
+                  <!--/.box --> 
+                </div>
+                <!--/.item --> 
+              </div>
+              <!--/.carousel --> 
+            </div>
+            <!--/.carousel-wrapper --> 
+          </div>
+          <!--/column --> 
+        </div>
+        <!--/.row --> 
+      </div>
+      <!--/.container --> 
+    </div>
+    <!--/.dark-wrapper -->
+    <div class="inverse-wrapper">
+      <div class="container inner">
+        <h3 class="main-title text-center">Task <strong>Forces</strong></h3>
+        <p class="lead text-center">The 2022 T20 is committed to maintain consistency in the agenda-setting to address the most challenging international problems. Thus, the T20 main activities will be spearheaded by 9 (nine) task forces. Each task force commits to curate the best solutions from the global pool of experts and researchers to address various priority issues.</p>
+        <div class="divide30"></div>
+        <div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="col-sm-4">
+            <div class="feature">
+              <div class="icon"> <img src="{% static 'web/images/icons/1x/TF1.png' %}"> </div>
+              <h4>TF1 - Open Trade and Sustainable Investment</h4>
+              <p>read more</p>
+            </div>
+            <!--/.feature --> 
+          </div>
+          <!--/column -->
+          <div class="col-sm-4">
+            <div class="feature">
+              <div class="icon"> <img src="{% static 'web/images/icons/1x/TF2.png' %}"> </div>
+              <h4>TF2 - Meaningful Digital Connectivity, Cyber Security, Empowerment</h4>
+              <p>read more</p>
+            </div>
+            <!--/.feature --> 
+          </div>
+          <!--/column -->
+          <div class="col-sm-4">
+            <div class="feature">
+              <div class="icon"> <img src="{% static 'web/images/icons/1x/TF3.png' %}"> </div>
+              <h4>TF3 - Governing Climate Target, Energy Transition and Environmental Protection</h4>
+              <p>read more</p>
+            </div>
+            <!--/.feature --> 
+          </div>
+          <!--/column --> 
+        </div>
+        <!--/.row -->
+        <div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+          <div class="col-sm-4">
+            <div class="feature">
+              <div class="icon"> <img src="{% static 'web/images/icons/1x/TF4.png' %}"> </div>
+              <h4>TF4 - Food Security and Sustainable Agriculture</h4>
+              <p>read more</p>
+            </div>
+            <!--/.feature --> 
+          </div>
+          <!--/column -->
+          <div class="col-sm-4">
+            <div class="feature">
+              <div class="icon"> <img src="{% static 'web/images/icons/1x/TF5.png' %}"> </div>
+              <h4>TF5 - Inequality, Human Capital, and Well-being</h4>
+              <p>read more</p>
+            </div>
+            <!--/.feature --> 
+          </div>
+          <!--/column -->
+          <div class="col-sm-4">
+            <div class="feature">
+              <div class="icon"> <img src="{% static 'web/images/icons/1x/TF6.png' %}"> </div>
+              <h4>TF6 - Global Health Security and COVID-19</h4>
+              <p>read more</p>
+            </div>
+            <!--/.feature --> 
+          </div>
+          <!--/column --> 
+        </div>
+        <!--/.row -->
+        <div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+          <div class="col-sm-4">
+            <div class="feature">
+              <div class="icon"> <img src="{% static 'web/images/icons/1x/TF7.png' %}"> </div>
+              <h4>TF7 - International Finance and Economic Recovery</h4>
+              <p>read more</p>
+            </div>
+            <!--/.feature --> 
+          </div>
+          <!--/column -->
+          <div class="col-sm-4">
+            <div class="feature">
+              <div class="icon"> <img src="{% static 'web/images/icons/1x/TF8.png' %}"> </div>
+              <h4>TF8 - Resilient Infrastructure and Financing</h4>
+              <p>read more</p>
+            </div>
+            <!--/.feature --> 
+          </div>
+          <!--/column -->
+          <div class="col-sm-4">
+            <div class="feature">
+              <div class="icon"> <img src="{% static 'web/images/icons/1x/TF9.png' %}"> </div>
+              <h4>TF9 - Global Cooperation for SDGs Financing</h4>
+              <p>read more</p>
+            </div>
+            <!--/.feature --> 
+          </div>
+          <!--/column --> 
+        </div>
+        <!--/.row --> 
+      </div>
+      <!--/.container --> 
+    </div>
+
+
+   <div class="dark-wrapper">
+    <div class="container inner">
+      <h3 class="main-title text-center"><strong>Recent</strong> news</h3>
+      <div class="carousel-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+        <div class="carousel carousel-boxed blog">
+
+        {% for B in Berita %}
+          <div class="item">
+            <figure><img src="{{ B.image | thumbnail_url:'news' }}" alt="" /></figure>
+            <div class="box">
+              <h3 class="post-title"><a href="blog-post.html">{{B.judul}}</a></h3>
+              <div class="meta"><span class="date">{{B.mli}}</span></div>
+              <p>{{B.description|safe|truncatewords_html:20}}</p>
+              <a href="blog-post.html" class="more">Continue Reading</a> </div>
+            <!-- /.box --> 
+          </div>
+          <!-- /.item -->
+        {% endfor B %}
+          <!-- /.item --> 
+        </div>
+        <!--/.carousel --> 
+      </div>
+      <!--/.carousel-wrapper --> 
+      
+    </div>
+    <!--/.container --> 
+  </div>
+    <!--/.dark-wrapper -->
+    <!--/.light-wrapper -->
+
+{% endblock content %}

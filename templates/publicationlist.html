@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+{% load static %}
+ 
+
+{% block content %}
+  <!-- /.navbar -->
+  <div class="offset"></div>
+  <div class="light-wrapper page-title">
+    <div class="container inner">
+      <h1 class="pull-left">Boxed Grid Blog</h1>
+      <form class="searchform pull-right" method="get">
+        <input type="text" name="s" value="Search something" onfocus="this.value=''" onblur="this.value='Search something'">
+        <button type="submit" class="btn"><i class="icon-search-1"></i></button>
+      </form>
+      <!-- /.searchform --> 
+    </div>
+    <!-- /.container --> 
+  </div>
+  <!-- /.page-title -->
+  <div class="dark-wrapper">
+    <div class="container inner">
+      <div class="blog grid-view col3">
+        <div class="blog-posts text-boxes">
+          <div class="isotope row">
+            <div class="col-sm-6 col-md-4 grid-view-post">
+              <div class="post box">
+                <figure class="main"><a href="{% url 'publication-detail' %}">
+                  <div class="text-overlay">
+                    <div class="info"><span>Read More</span></div>
+                  </div>
+                  <img src="{%  static 'web/images/art/b1.jpg' %}"" alt="" /></a></figure>
+                <h3 class="post-title"><a href="{% url 'publication-detail' %}">Parturient Commodo Aenean</a></h3>
+                <div class="meta"><span class="date">14 Oct 2014</span><span class="category"><a href="#">Logo</a>, <a href="#">PSD</a></span><span class="comments"><a href="#"><i class="icon-chat-1"></i> 15</a></span></div>
+                <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibus et magnis dis parturient.</p>
+                <a href="{% url 'publication-detail' %}" class="more">Continue Reading</a> </div>
+              <!-- /.box --> 
+            </div>
+            <!-- /column -->
+            
+            <div class="col-sm-6 col-md-4 grid-view-post">
+              <div class="post box">
+                <figure class="main"><a href="{% url 'publication-detail' %}">
+                  <div class="text-overlay">
+                    <div class="info"><span>Read More</span></div>
+                  </div>
+                  <img src="{%  static 'web/images/art/b2.jpg' %}"" alt="" /></a></figure>
+                <h3 class="post-title"><a href="{% url 'publication-detail' %}">Quam Mollis Ligula Nullam</a></h3>
+                <div class="meta"><span class="date">12 Nov 2014</span><span class="category"><a href="#">Business Card</a></span><span class="comments"><a href="#"><i class="icon-chat-1"></i> 15</a></span></div>
+                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus.</p>
+                <a href="{% url 'publication-detail' %}" class="more">Continue Reading</a> </div>
+              <!-- /.box --> 
+            </div>
+            <!-- /column -->
+            
+            <div class="col-sm-6 col-md-4 grid-view-post">
+              <div class="post box">
+                <figure class="main"><a href="{% url 'publication-detail' %}">
+                  <div class="text-overlay">
+                    <div class="info"><span>Read More</span></div>
+                  </div>
+                  <img src="{%  static 'web/images/art/b3.jpg' %}"" alt="" /></a></figure>
+                <h3 class="post-title"><a href="{% url 'publication-detail' %}">Tellus Bibendum Parturient</a></h3>
+                <div class="meta"><span class="date">23 Dec 2014</span><span class="category"><a href="#">Mockup</a>, <a href="#">PSD</a></span><span class="comments"><a href="#"><i class="icon-chat-1"></i> 15</a></span></div>
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor.</p>
+                <a href="{% url 'publication-detail' %}" class="more">Continue Reading</a> </div>
+              <!-- /.box --> 
+            </div>
+            <!-- /column -->
+            
+            <div class="col-sm-6 col-md-4 grid-view-post">
+              <div class="post box">
+                <figure class="main"><a href="{% url 'publication-detail' %}">
+                  <div class="text-overlay">
+                    <div class="info"><span>Read More</span></div>
+                  </div>
+                  <img src="{%  static 'web/images/art/b4.jpg' %}"" alt="" /></a></figure>
+                <h3 class="post-title"><a href="{% url 'publication-detail' %}">Bibendum Inceptos Justo</a></h3>
+                <div class="meta"><span class="date">14 Oct 2014</span><span class="category"><a href="#">Letter</a>, <a href="#">Character</a></span><span class="comments"><a href="#"><i class="icon-chat-1"></i> 15</a></span></div>
+                <p>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue etiam porta.</p>
+                <a href="{% url 'publication-detail' %}" class="more">Continue Reading</a> </div>
+              <!-- /.box --> 
+            </div>
+            <!-- /column -->
+            
+            <div class="col-sm-6 col-md-4 grid-view-post">
+              <div class="post box">
+                <figure class="main"><a href="{% url 'publication-detail' %}">
+                  <div class="text-overlay">
+                    <div class="info"><span>Read More</span></div>
+                  </div>
+                  <img src="{%  static 'web/images/art/b5.jpg' %}"" alt="" /></a></figure>
+                <h3 class="post-title"><a href="{% url 'publication-detail' %}">Porta Vestibulum Fermentum</a></h3>
+                <div class="meta"><span class="date">14 Oct 2014</span><span class="category"><a href="#">Graphic</a>, <a href="#">Mockup</a></span><span class="comments"><a href="#"><i class="icon-chat-1"></i> 15</a></span></div>
+                <p>Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui.</p>
+                <a href="{% url 'publication-detail' %}" class="more">Continue Reading</a> </div>
+              <!-- /.box --> 
+            </div>
+            <!-- /column -->
+            
+            <div class="col-sm-6 col-md-4 grid-view-post">
+              <div class="post box">
+                <figure class="main"><a href="{% url 'publication-detail' %}">
+                  <div class="text-overlay">
+                    <div class="info"><span>Read More</span></div>
+                  </div>
+                  <img src="{%  static 'web/images/art/b6.jpg' %}"" alt="" /></a></figure>
+                <h3 class="post-title"><a href="{% url 'publication-detail' %}">Etiam Elit Vulputate Mollis</a></h3>
+                <div class="meta"><span class="date">14 Oct 2014</span><span class="category"><a href="#">Tag</a>, <a href="#">Label</a></span><span class="comments"><a href="#"><i class="icon-chat-1"></i> 15</a></span></div>
+                <p>Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus tellus.</p>
+                <a href="{% url 'publication-detail' %}" class="more">Continue Reading</a> </div>
+              <!-- /.box --> 
+            </div>
+            <!-- /column -->
+            
+            <div class="col-sm-6 col-md-4 grid-view-post">
+              <div class="post box">
+                <figure class="main"><a href="{% url 'publication-detail' %}">
+                  <div class="text-overlay">
+                    <div class="info"><span>Read More</span></div>
+                  </div>
+                  <img src="{%  static 'web/images/art/b7.jpg' %}"" alt="" /></a></figure>
+                <h3 class="post-title"><a href="{% url 'publication-detail' %}">Nibh Commodo Malesuada</a></h3>
+                <div class="meta"><span class="date">14 Oct 2014</span><span class="category"><a href="#">Letter</a>, <a href="#">Character</a></span><span class="comments"><a href="#"><i class="icon-chat-1"></i> 15</a></span></div>
+                <p>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue etiam porta.</p>
+                <a href="{% url 'publication-detail' %}" class="more">Continue Reading</a> </div>
+              <!-- /.box --> 
+            </div>
+            <!-- /column -->
+            
+            <div class="col-sm-6 col-md-4 grid-view-post">
+              <div class="post box">
+                <figure class="main"><a href="{% url 'publication-detail' %}">
+                  <div class="text-overlay">
+                    <div class="info"><span>Read More</span></div>
+                  </div>
+                  <img src="{%  static 'web/images/art/b8.jpg' %}"" alt="" /></a></figure>
+                <h3 class="post-title"><a href="{% url 'publication-detail' %}">Tellus Purus Venenatis</a></h3>
+                <div class="meta"><span class="date">14 Oct 2014</span><span class="category"><a href="#">Graphic</a>, <a href="#">Mockup</a></span><span class="comments"><a href="#"><i class="icon-chat-1"></i> 15</a></span></div>
+                <p>Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui.</p>
+                <a href="{% url 'publication-detail' %}" class="more">Continue Reading</a> </div>
+              <!-- /.box --> 
+            </div>
+            <!-- /column -->
+            
+            <div class="col-sm-6 col-md-4 grid-view-post">
+              <div class="post box">
+                <figure class="main"><a href="{% url 'publication-detail' %}">
+                  <div class="text-overlay">
+                    <div class="info"><span>Read More</span></div>
+                  </div>
+                  <img src="{%  static 'web/images/art/b9.jpg' %}"" alt="" /></a></figure>
+                <h3 class="post-title"><a href="{% url 'publication-detail' %}">Nibh Fringilla Vestibulum</a></h3>
+                <div class="meta"><span class="date">14 Oct 2014</span><span class="category"><a href="#">Tag</a>, <a href="#">Label</a></span><span class="comments"><a href="#"><i class="icon-chat-1"></i> 15</a></span></div>
+                <p>Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus tellus.</p>
+                <a href="{% url 'publication-detail' %}" class="more">Continue Reading</a> </div>
+              <!-- /.box --> 
+            </div>
+            <!-- /column --> 
+            
+          </div>
+          <!-- /.isotope --> 
+        </div>
+        <!-- /.blog-posts -->
+        
+        <div class="pagination">
+          <ul>
+            <li><a href="#" class="btn">Prev</a></li>
+            <li class="active"><a href="#" class="btn"><span>1</span></a></li>
+            <li><a href="#" class="btn"><span>2</span></a></li>
+            <li><a href="#" class="btn"><span>3</span></a></li>
+            <li><a href="#" class="btn">Next</a></li>
+          </ul>
+        </div>
+        <!-- /.pagination --> 
+      </div>
+      <!-- /.blog --> 
+    </div>
+    <!--/.container --> 
+  </div>
+  <!--/.dark-wrapper -->
+  
+  {% endblock %}

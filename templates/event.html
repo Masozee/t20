@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+{% load thumbnail %}
+ 
+
+{% block content %}
+  <!-- /.navbar -->
+  <div class="offset"></div>
+  <div class="light-wrapper page-title">
+    <div class="container inner">
+      <h1 class="pull-left">Event List</h1>
+      <!-- /.searchform --> 
+    </div>
+    <!-- /.container --> 
+  </div>
+  <!-- /.page-title -->
+  <div class="dark-wrapper">
+    <div class="container inner">
+      <div class="blog row list-view">
+        <div class="col-sm-8 blog-content">
+          <div class="blog-posts">
+            {% for A in events %}
+            <div class="post">
+              <div class="row">
+                <div class="col-sm-4">
+                  <figure><a href="{% url 'events-details' %}">
+                    <div class="text-overlay">
+                      <div class="info"><span>Read More</span></div>
+                    </div>
+                    <img src="{{ A.gambar |thumbnail_url:'events'}}" alt=""></a></figure>
+                </div>
+                <!-- /column -->
+                <div class="col-sm-8 post-content">
+                  <h3 class="post-title"><a href="{% url 'events-details' %}">{{A.judul}}</a></h3>
+                  <div class="meta"><span class="date">{{A.mli}}</span><span class="comments"></div>
+                  <p>{{A.description|safe|truncatewords_html:50}}</p>
+                  <a href="{% url 'events-details' %}" class="more">Continue Reading</a> </div>
+                <!-- /column --> 
+              </div>
+              <!-- /.row --> 
+              
+            </div>
+            <hr />
+            <!-- /.post -->
+            {% endfor %}
+          </div>
+          <!-- /.blog-posts -->
+          
+          <div class="pagination">
+            <ul>
+              <li><a href="#" class="btn">Prev</a></li>
+              <li class="active"><a href="#" class="btn"><span>1</span></a></li>
+              <li><a href="#" class="btn"><span>2</span></a></li>
+              <li><a href="#" class="btn"><span>3</span></a></li>
+              <li><a href="#" class="btn">Next</a></li>
+            </ul>
+          </div>
+          <!-- /.pagination --> 
+          
+        </div>
+        <!-- /.blog-content -->
+        
+        <aside class="col-sm-4 sidebar">
+          <div class="sidebox widget">
+            <h3 class="widget-title">Popular Posts</h3>
+            <ul class="post-list">
+              <li>
+                <div class="icon-overlay"> <a href="blog-post.html"><img src="{%  static 'web/images/art/a1.jpg' %}" alt="" /> </a> </div>
+                <div class="meta">
+                  <h5><a href="blog-post.html">Magna Mollis Ultricies</a></h5>
+                  <em><span class="date">3th Oct 2012</span> <span class="comments"><a href="#">8 <i class="icon-chat-1"></i></a></span></em> </div>
+              </li>
+              <li>
+                <div class="icon-overlay"> <a href="blog-post.html"><img src="{%  static 'web/images/art/a2.jpg' %}" alt="" /> </a> </div>
+                <div class="meta">
+                  <h5><a href="blog-post.html">Ornare Nullam Risus Tellus Elit Fusce Inceptos</a></h5>
+                  <em><span class="date">28th Sep 2012</span> <span class="comments"><a href="#">5 <i class="icon-chat-1"></i></a></span></em> </div>
+              </li>
+              <li>
+                <div class="icon-overlay"> <a href="blog-post.html"><img src="{%  static 'web/images/art/a3.jpg' %}" alt="" /> </a> </div>
+                <div class="meta">
+                  <h5><a href="blog-post.html">Euismod Nullam</a></h5>
+                  <em><span class="date">15th Aug 2012</span> <span class="comments"><a href="#">9 <i class="icon-chat-1"></i></a></span></em> </div>
+              </li>
+            </ul>
+            <!-- /.post-list --> 
+          </div>
+          <!-- /.widget -->
+        </aside>
+        <!-- /column .sidebar --> 
+      </div>
+      <!-- /.blog --> 
+    </div>
+    <!--/.container --> 
+  </div>
+  <!--/.dark-wrapper -->
+  
+ {% endblock %}

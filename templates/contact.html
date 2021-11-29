@@ -1,0 +1,142 @@
+"{% extends "base.html" %}
+"{% load static %}
+ 
+
+"{% block content %}
+  <div class="offset"></div>
+  <div class="light-wrapper page-title">
+    <div class="container inner">
+      <h1>Contact</h1>
+    </div>
+    <!-- /.container --> 
+  </div>
+  <!-- /.page-title -->
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2499.4483800426133!2d3.2241689!3d51.2108153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c350cfcf934d7d%3A0xa4d8f385ffa7d70b!2sChoco-Story!5e0!3m2!1sen!2str!4v1534408440419" width="100%" height="400" frameborder="0" style="border:0; display:block;" allowfullscreen></iframe>
+  <div class="dark-wrapper">
+    <div class="container inner">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2 class="post-title">Get in Touch</h2>
+          <p>Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus.</p>
+          <div class="divide10"></div>
+          <div class="form-container">
+            <form action="contact/vanilla-form.php" method="post" class="vanilla vanilla-form" novalidate="novalidate">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-field">
+                    <label>
+                      <input type="text" name="name" placeholder="Your name" required="required">
+                      <i class="icon-user"></i></label>
+                  </div>
+                  <!--/.form-field --> 
+                </div>
+                <!--/column -->
+                <div class="col-sm-6">
+                  <div class="form-field">
+                    <label>
+                      <input type="email" name="email" placeholder="Your e-mail" required="required">
+                      <i class="icon-mail-alt"></i></label>
+                  </div>
+                  <!--/.form-field --> 
+                </div>
+                <!--/column -->
+                <div class="col-sm-6">
+                  <div class="form-field">
+                    <label>
+                      <input type="tel" name="tel" placeholder="Phone">
+                      <i class="icon-phone"></i></label>
+                  </div>
+                  <!--/.form-field --> 
+                </div>
+                <!--/column -->
+                <div class="col-sm-6">
+                  <div class="form-field">
+                    <label class="custom-select">
+                      <select name="department" required="required">
+                        <option value="">Select Department</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Support">Customer Support</option>
+                        <option value="Other">Other</option>
+                      </select>
+                      <i class="icon-ok"></i><span><!-- fake select handler --></span> </label>
+                  </div>
+                  <!--/.form-field --> 
+                </div>
+                <!--/column --> 
+              </div>
+              <!--/.row -->
+              <textarea name="message" placeholder="Type your message here..."></textarea>
+              <div class="radio-set">
+                <label>Subject:</label>
+                <label>
+                  <input type="radio" name="subject" value="General">
+                  <span><!-- fake radio --></span> General</label>
+                <label>
+                  <input type="radio" name="subject" value="Hi">
+                  <span><!-- fake radio --></span> Say Hi</label>
+                <label>
+                  <input type="radio" name="subject" value="Other">
+                  <span><!-- fake radio --></span> Other</label>
+              </div>
+              <!--/.radio-set -->
+              <input type="submit" class="btn" value="Send" data-error="Fix errors" data-processing="Sending..." data-success="Thank you!">
+              <footer class="notification-box"></footer>
+            </form>
+            <!--/.vanilla-form --> 
+          </div>
+          <!--/.form-container --> 
+          
+        </div>
+        <!--/column -->
+        
+        <aside class="col-sm-4">
+          <div class="sidebox widget">
+            <h3 class="widget-title">Address</h3>
+            <p>Fusce dapibus, tellus commodo, tortor mauris condimentum utellus fermentum, porta sem malesuada magna. Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur.</p>
+            <address>
+            <strong>Kwoon, Inc.</strong><br>
+            Moon Street Light Avenue, 14/05 <br>
+            Jupiter, JP 80630<br>
+            <abbr title="Phone">P:</abbr> 00 (123) 456 78 90 <br>
+            <abbr title="Email">E:</abbr> <a href="mailto:#">first.last@email.com</a>
+            </address>
+          </div>
+          <!-- /.widget --> 
+          
+        </aside>
+        <!--/column --> 
+        
+      </div>
+      <!--/.row --> 
+      
+    </div>
+    <!--/.container --> 
+  </div>
+  <!--/.dark-wrapper -->
+  
+  <div class="parallax inverse-wrapper parallax3">
+    <div class="container inner text-center">
+      <h3 class="main-title no-line text-center"><strong>Subscribe</strong> to our newsletter</h3>
+      <div class="newsletter-wrapper">
+        <div id="mc_embed_signup" class="newsletter-form">
+          <form action="http://elemisfreebies.us3.list-manage1.com/subscribe/post?u=ddc180777a163e0f9f66ee014&amp;id=056957de28" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter email" required="">
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -500px;">
+              <input type="text" name="b_ddc180777a163e0f9f66ee014_056957de28" value="">
+            </div>
+            <div class="clear">
+              <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="btn">
+            </div>
+          </form>
+        </div>
+        <!-- /#mc_embed_signup --> 
+      </div>
+      <!-- /.newsletter-wrapper --> 
+    </div>
+    <!-- /.container --> 
+  </div>
+  <!-- /.parallax -->
+ {% endblock %}
